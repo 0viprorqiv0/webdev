@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="task11.css">
+</head>
+<body>
+  <div class="site">
+    <header class="banner">Banner</header>
+
+    <div class="page-body">
+      <nav class="sidebar" aria-label="Photo categories">
+        <a href="category1.html" target="photo-frame">Nature</a>
+        <a href="category2.html" target="photo-frame">Cities</a>
+        <a href="category3.html" target="photo-frame">Animals</a>
+        <a href="about.html" target="photo-frame">About</a>
+      </nav>
+
+      <main class="viewer">
+        <iframe
+          src="category1.html"
+          name="photo-frame"
+          title="Photo gallery content"
+        ></iframe>
+      </main>
+    </div>
+
+    <footer class="footer">Copyright &copy; 2026</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+/* Small base rules make the exercise easier to inspect. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #222;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* T1 - Banner */
+.banner {
+  padding: 24px;
+  color: white;
+  text-align: center;
+  background-color: #b00000;
+}
+
+.site-name,
+.tagline {
+  margin: 0;
+}
+
+/* T2 and T3 - Navigation */
+.main-nav {
+  display: flex;
+  gap: 20px;
+  padding: 16px 24px;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #b00000;
+}
+
+/* Kept after .nav-link on purpose: equal specificity, later rule wins. */
+.current {
+  color: #b00000;
+  font-weight: bold;
+}
+
+/* T4 - Two-column layout */
+.layout {
+  display: flex;
+  gap: 30px;
+  padding: 24px;
+}
+
+.sidebar {
+  flex: 0 0 220px;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* T5 and T6 - Sidebar */
+.side-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.side-link {
+  color: #444;
+  text-decoration: none;
+}
+
+.side-link:hover {
+  color: #b00000;
+}
+
+.side-note {
+  color: #b00000 !important;
+}
+
+/* T7 - Only lead paragraphs inside #about */
+#about .lead {
+  color: #b00000;
+  font-size: 18px;
+}
+
+/* T8 - Equal cards */
+.card-row {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #999;
+}
+
+/* T9 - Badges */
+.badge {
+  display: inline-block;
+  padding: 4px;
+  color: white;
+  background-color: #b00000;
+}
+
+.badge.closed {
+  background-color: #777;
+}
+
+/* T10 - Timetable */
+.schedule {
+  width: 100%;
+  border-collapse: collapse;
+  empty-cells: show;
+}
+
+.schedule th,
+.schedule td {
+  padding: 8px;
+  border: 1px solid #999;
+}
+
+.schedule th {
+  color: white;
+  background-color: #b00000;
+}
+
+/* T11 - Credits table only */
+#ects-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #eee;
+}
+
+#ects-table th,
+#ects-table td {
+  padding: 8px;
+  border: 1px solid #999;
+}
+
+#ects-table th {
+  color: white;
+  background-color: #153a67;
+}
+
+#ects-table tr:hover {
+  background-color: #fff2a8;
+}
+
+/* T12 - News */
+.news-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.news-date {
+  display: inline-block;
+  width: 70px;
+  color: #777;
+  font-family: monospace;
+}
+
+.news-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.news-link:hover {
+  color: #b00000;
+}
+
+/* T13 - Footer */
+.page-footer {
+  padding: 16px;
+  color: white;
+  text-align: center;
+  background-color: #b00000;
+}
+
+.page-footer p {
+  margin: 0;
+}
+
+/* Optional safety for narrow screens; it does not change the desktop tasks. */
+@media (max-width: 760px) {
+  .layout,
+  .card-row {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-basis: auto;
+  }
+
+  .schedule {
+    font-size: 13px;
+  }
+}
